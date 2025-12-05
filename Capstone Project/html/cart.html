@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FIXED CSS PATHS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cart.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <title>Shopping Cart - House of Phoenix</title>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <nav class="navbar">    
+        <div class="nav-left">
+            <div class="logo">
+                <a href="home.html">
+                    <img src="../img/logo.png" alt="House of Phoenix">
+                </a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="home.html#men">Men</a></li>
+                <li><a href="home.html#women">Women</a></li>
+                <li><a href="home.html#gadgets">Gadgets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-right">
+            <div class="search">
+                <input type="search" placeholder="Search..." class="search-bar">
+                <button class="search-button">🔍</button>
+            </div>
+
+            <button class="wishlist-button">♡</button>
+
+            <div class="cart-container">
+                <a href="cart.html">
+                    <button class="cart-button">🛒</button>
+                </a>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- CART CONTENT -->
+<main class="cart-page">
+    <div class="cart-container-main">
+        <h1 class="cart-title">🛒 Your Shopping Cart</h1>
+
+        <div class="cart-content">
+
+            <!-- LEFT SIDE: CART ITEMS -->
+            <div class="cart-items" id="cartItemsList">
+                <div class="empty-cart" id="emptyCart">
+                    <p>Your cart is empty! 😢</p>
+                    <a href="home.html" class="continue-shopping-btn">Continue Shopping</a>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE: CART SUMMARY -->
+            <div class="cart-summary">
+                <h2>Order Summary</h2>
+
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">₹0</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Shipping:</span>
+                    <span class="free-shipping">FREE</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Tax (18%):</span>
+                    <span id="tax">₹0</span>
+                </div>
+
+                <hr class="summary-divider">
+
+                <div class="summary-row total-row">
+                    <span>Total:</span>
+                    <span id="total">₹0</span>
+                </div>
+
+                <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+                <button class="clear-cart-btn" onclick="clearCartPage()">Clear Cart</button>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="phoenix-footer">
+    <div class="footer-container">
+
+        <div class="footer-section brand">
+            <h3>House Of Phoenix</h3>
+            <p>Your destination for fashion, tech, and premium lifestyle essentials — crafted with quality and style.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#">Shipping Information</a></li>
+                <li><a href="#">Return & Refund Policy</a></li>
+                <li><a href="#">Order Tracking</a></li>
+                <li><a href="#">Help Center</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: support@houseofphoenix.com</p>
+            <p>Phone: +91 98765 43210</p>
+
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 House Of Phoenix. All Rights Reserved.
+    </div>
+</footer>
+
+<!-- FIXED JS PATHS -->
+<script src="../js/app.js"></script>
+<script src="../js/cart.js"></script>
+
+</body>
+</html>

@@ -303,7 +303,6 @@ body {
 
 .gadgetsss{
   margin-left: 325%;
-
 }
 
 .collection-card:hover {
@@ -347,7 +346,6 @@ body {
   overflow-x: auto;
   scroll-behavior: smooth;
   padding: 20px 40px; 
-  overflow-y: visible;
 }
 
 .product-grid::-webkit-scrollbar {

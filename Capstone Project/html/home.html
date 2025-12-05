@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FIXED CSS PATHS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cart.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <title>House of Phoenix</title>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <nav class="navbar">    
+        <div class="nav-left">
+            <div class="logo">
+                <a href="home.html">
+                    <img src="../img/logo.png" alt="House of Phoenix">
+                </a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="#men" onclick="scrollToSection('men')">Men</a></li>
+                <li><a href="#women" onclick="scrollToSection('women')">Women</a></li>
+                <li><a href="#gadgets" onclick="scrollToSection('gadgets')">Gadgets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-right">
+            <div class="search">
+                <input type="search" placeholder="Search..." class="search-bar" id="searchInput">
+                <button class="search-button" onclick="handleSearch()">🔍</button>
+            </div>
+
+            <button class="wishlist-button" onclick="showWishlist()">♡</button>
+
+          <div class="cart-container">
+            <a href="cart.html">
+              <button class="cart-button">🛒</button>
+            </a>  
+        <span class="cart-count" id="cartCount">0</span>
+          </div>
+        </div>
+    </nav>
+</header>
+
+<!-- SLIDESHOW -->
+<main>
+    <section class="slideshow">
+        <div class="slide fade" style="background-image: url('../img/newarrivals.png');"></div>
+        <div class="slide fade" style="background-image: url('../img/dailyrewards.png');"></div>
+    </section>
+
+    <!-- FEATURED COLLECTIONS -->
+    <section class="featured-collections">
+        <h2 class="section-title">Featured Collections</h2>
+
+        <div class="collections-container">
+            <div class="collection-card">
+                <img src="../img/winter.jpg" alt="Winter Collection">
+                <div class="collection-info">
+                    <h3>Winter Essentials</h3>
+                    <p>Cozy styles for the season</p>
+                </div>
+            </div>
+
+            <div class="collection-card">
+                <img src="../img/luxury item.png" alt="Luxury Collection">
+                <div class="collection-info">
+                    <h3>Luxury Picks</h3>
+                    <p>Exclusive designs for the bold</p>
+                </div>
+            </div>
+
+            <div class="collection-card">
+                <img src="../img/street wear.png" alt="Streetwear Collection">
+                <div class="collection-info">
+                    <h3>Urban Streetwear</h3>
+                    <p>Trendsetting looks you'll love</p>
+                </div>
+            </div>
+
+            <div class="collection-card">
+                <img src="../img/festive collection.png" alt="Festive Collection">
+                <div class="collection-info">
+                    <h3>Festive Glow</h3>
+                    <p>Celebrate in golden style</p>
+                </div>
+            </div>
+
+            <div class="collection-card gadgetsss">
+                <img src="../img/gadgets.png" alt="Smart Gadgets">
+                <div class="collection-info">
+                    <h3>Smart Gadgets</h3>
+                    <p>Cutting-edge tech for your lifestyle</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- MEN'S TRENDS -->
+<section class="product-showcase" id="men">
+  <h2>Men's TRENDS</h2>
+
+  <div class="product-grid">
+
+      <div class="product-card">
+        <img src="../img/leatherjacket.png" alt="Classic Leather Jacket">
+        <h3>Classic Leather Jacket</h3>
+        <p>Timeless black outerwear</p>
+        <span class="price">₹3,499</span>
+        <div class="buttons">
+          <button class="cart-btn" onclick="addToCart('Classic Leather Jacket', 3499)">Add to Cart</button>
+          <button class="wish-btn" onclick="addToWishlist('Classic Leather Jacket')">❤</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../img/denimshirt.png" alt="Denim Shirt">
+        <h3>Denim Shirt</h3>
+        <p>Cool & casual vibe</p>
+        <span class="price">₹1,899</span>
+        <div class="buttons">
+          <button class="cart-btn" onclick="addToCart('Denim Shirt', 1899)">Add to Cart</button>
+          <button class="wish-btn" onclick="addToWishlist('Denim Shirt')">❤</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../img/formalsuit.png" alt="Formal Suit">
+        <h3>Formal Suit</h3>
+        <p>Sharp, confident look</p>
+        <span class="price">₹6,499</span>
+        <div class="buttons">
+          <button class="cart-btn" onclick="addToCart('Formal Suit', 6499)">Add to Cart</button>
+          <button class="wish-btn" onclick="addToWishlist('Formal Suit')">❤</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../img/shirt.png" alt="Casual T-Shirt">
+        <h3>Casual T-Shirt</h3>
+        <p>Soft cotton comfort</p>
+        <span class="price">₹799</span>
+        <div class="buttons">
+          <button class="cart-btn" onclick="addToCart('Casual T-Shirt', 799)">Add to Cart</button>
+          <button class="wish-btn" onclick="addToWishlist('Casual T-Shirt')">❤</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../img/longcoat.png" alt="Winter Coat">
+        <h3>Winter Coat</h3>
+        <p>Stay warm in luxury</p>
+        <span class="price">₹4,999</span>
+        <div class="buttons">
+          <button class="cart-btn" onclick="addToCart('Winter Coat', 4999)">Add to Cart</button>
+          <button class="wish-btn" onclick="addToWishlist('Winter Coat')">❤</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../img/sneakers.png" alt="Sports Sneakers">
+        <h3>Sports Sneakers</h3>
+        <p>Comfort meets speed</p>
+        <span class="price">₹2,999</span>
+        <div class="buttons">
+          <button class="cart-btn" onclick="addToCart('Sports Sneakers', 2999)">Add to Cart</button>
+          <button class="wish-btn" onclick="addToWishlist('Sports Sneakers')">❤</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../img/watch.png" alt="Smartwatch">
+        <h3>Smartwatch</h3>
+        <p>Track style & fitness</p>
+        <span class="price">₹3,299</span>
+        <div class="buttons">
+          <button class="cart-btn" onclick="addToCart('Smartwatch', 3299)">Add to Cart</button>
+          <button class="wish-btn" onclick="addToWishlist('Smartwatch')">❤</button>
+        </div>
+      </div>
+
+  </div>
+</section>
+
+<!-- WOMEN'S TRENDS -->
+<section class="product-showcase" id="women">
+  <h2>WOMEN'S TRENDS</h2>
+
+  <div class="product-grid">
+
+      <div class="product-card">
+        <img src="../img/silkdress.png" alt="Silk Dress">
+        <h3>Elegant Silk Dress</h3>
+        <p>Flowy golden-beige silk with a subtle shimmer</p>
+        <span class="price">₹3,299</span>
+        <div class="buttons">
+          <button class="cart-btn" onclick="addToCart('Elegant Silk Dress', 3299)">Add to Cart</button>
+          <button class="wish-btn" onclick="addToWishlist('Elegant Silk Dress')">❤</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../img/womenblazer.png" alt="Blazer Set">
+        <h3>Formal Blazer Set</h3>
+        <p>Black blazer with gold buttons</p>
+        <span class="price">₹5,499</span>
+        <div class="buttons">
+          <button class="cart-btn" onclick="addToCart('Formal Blazer Set', 5499)">Add to Cart</button>
+          <button class="wish-btn" onclick="addToWishlist('Formal Blazer Set')">❤</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../img/croptop.png" alt="Crop Top">
+        <h3>Casual Crop Top</h3>
+        <p>Trendy pastel crop top with gold accents</p>
+        <span class="price">₹1,199</span>
+        <div class="buttons">
+          <button class="cart-btn" onclick="addToCart('Casual Crop Top', 1199)">Add to Cart</button>
+          <button class="wish-btn" onclick="addToWishlist('Casual Crop Top')">❤</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../img/trenchcoat.png" alt="Trench Coat">
+        <h3>Winter Trench Coat</h3>
+        <p>Warm beige coat with gold zipper detail</p>
+        <span class="price">₹4,899</span>
+        <div class="buttons">
+          <button class="cart-btn" onclick="addToCart('Winter Trench Coat', 4899)">Add to Cart</button>
+          <button class="wish-btn" onclick="addToWishlist('Winter Trench Coat')">❤</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../img/partygown.png" alt="Party Gown">
+        <h3>Party Gown</h3>
+        <p>Luxurious golden gown</p>
+        <span class="price">₹6,999</span>
+        <div class="buttons">
+          <button class="cart-btn" onclick="addToCart('Party Gown', 6999)">Add to Cart</button>
+          <button class="wish-btn" onclick="addToWishlist('Party Gown')">❤</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../img/denimjacket.png" alt="Denim Jacket">
+        <h3>Classic Denim Jacket</h3>
+        <p>Blue denim with gold stitching</p>
+        <span class="price">₹2,199</span>
+        <div class="buttons">
+          <button class="cart-btn" onclick="addToCart('Classic Denim Jacket', 2199)">Add to Cart</button>
+          <button class="wish-btn" onclick="addToWishlist('Classic Denim Jacket')">❤</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../img/kurti.png" alt="Office Kurti">
+        <h3>Office Kurti</h3>
+        <p>White embroidered kurti</p>
+        <span class="price">₹1,999</span>
+        <div class="buttons">
+          <button class="cart-btn" onclick="addToCart('Office Kurti', 1999)">Add to Cart</button>
+          <button class="wish-btn" onclick="addToWishlist('Office Kurti')">❤</button>
+        </div>
+      </div>
+
+  </div>
+</section>
+
+<!-- GADGET TRENDS -->
+<section class="product-showcase" id="gadgets">
+  <h2>Trending Gadgets</h2>
+  <div class="carousel-container">
+    <div class="product-grid">
+
+      <div class="product-card">
+        <img src="../img/Applewatch.png" alt="Smartwatch">
+        <h3>Apple Watch SE (2nd Gen)</h3>
+        <p>Fitness tracking, calls & sleek design</p>
+        <span class="price">₹14,999</span>
+        <div class="buttons">
+          <button class="cart-btn" onclick="addToCart('Apple Watch SE', 14999)">Add to Cart</button>
+          <button class="wish-btn" onclick="addToWishlist('Apple Watch SE')">❤</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../img/Earbuds.png" alt="Wireless Earbuds">
+        <h3>Nothing Ear (3)</h3>
+        <p>Crystal-clear sound with ANC</p>
+        <span class="price">₹9,999</span>
+        <div class="buttons">
+          <button class="cart-btn" onclick="addToCart('Nothing Ear (3)', 9999)">Add to Cart</button>
+          <button class="wish-btn" onclick="addToWishlist('Nothing Ear (3)')">❤</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../img/googlepixel9a.png" alt="Smartphone">
+        <h3>Google Pixel 9a</h3>
+        <p>AI-powered photography magic</p>
+        <span class="price">₹49,999</span>
+        <div class="buttons">
+          <button class="cart-btn" onclick="addToCart('Google Pixel 9a', 49999)">Add to Cart</button>
+          <button class="wish-btn" onclick="addToWishlist('Google Pixel 9a')">❤</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../img/metaquet3.png" alt="VR Headset">
+        <h3>Meta Quest 3</h3>
+        <p>Immersive VR and mixed reality</p>
+        <span class="price">₹39,999</span>
+        <div class="buttons">
+          <button class="cart-btn" onclick="addToCart('Meta Quest 3', 39999)">Add to Cart</button>
+          <button class="wish-btn" onclick="addToWishlist('Meta Quest 3')">❤</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../img/djimini2se.png" alt="Drone">
+        <h3>DJI Mini 2 SE</h3>
+        <p>Compact 4K drone for creators</p>
+        <span class="price">₹47,999</span>
+        <div class="buttons">
+          <button class="cart-btn" onclick="addToCart('DJI Mini 2 SE', 47999)">Add to Cart</button>
+          <button class="wish-btn" onclick="addToWishlist('DJI Mini 2 SE')">❤</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../img/logitechgprokeyboard.png" alt="Mechanical Keyboard">
+        <h3>Logitech G Pro X Keyboard</h3>
+        <p>Customizable RGB and switches</p>
+        <span class="price">₹12,999</span>
+        <div class="buttons">
+          <button class="cart-btn" onclick="addToCart('Logitech G Pro X Keyboard', 12999)">Add to Cart</button>
+          <button class="wish-btn" onclick="addToWishlist('Logitech G Pro X Keyboard')">❤</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../img/bose smartglasses.png" alt="Smart Glasses">
+        <h3>Bose Frames Tempo</h3>
+        <p>Audio glasses for outdoor lifestyle</p>
+        <span class="price">₹29,999</span>
+        <div class="buttons">
+          <button class="cart-btn" onclick="addToCart('Bose Frames Tempo', 29999)">Add to Cart</button>
+          <button class="wish-btn" onclick="addToWishlist('Bose Frames Tempo')">❤</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="phoenix-footer">
+  <div class="footer-container">
+
+    <div class="footer-section brand">
+      <h3>House Of Phoenix</h3>
+      <p>Your destination for fashion, tech, and premium lifestyle essentials — crafted with quality and style.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="#">Shipping Information</a></li>
+        <li><a href="#">Return & Refund Policy</a></li>
+        <li><a href="#">Order Tracking</a></li>
+        <li><a href="#">Help Center</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p>Email: support@houseofphoenix.com</p>
+      <p>Phone: +91 98765 43210</p>
+
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 House Of Phoenix. All Rights Reserved.
+  </div>
+</footer>
+
+<!-- FIXED JS PATH -->
+<script src="../js/cart.js"></script>
+<script src="../js/app.js"></script>
+</body>
+</html>
