@@ -252,3 +252,56 @@ function calculateDiscount(originalPrice, discountPercent) {
 console.log("✅ House of Phoenix JavaScript Loaded!");
 console.log("🛍️ All features are now working!");
 console.log("Try clicking the buttons to test!");
+document.addEventListener('DOMContentLoaded', function() {
+    // Create hamburger menu if it doesn't exist
+    const navLeft = document.querySelector('.nav-left');
+    if (navLeft && !document.querySelector('.hamburger')) {
+        const hamburger = document.createElement('div');
+        hamburger.className = 'hamburger';
+        hamburger.innerHTML = '<span></span><span></span><span></span>';
+        navLeft.appendChild(hamburger);
+        
+        // Add click event
+        hamburger.addEventListener('click', toggleMenu);
+    }
+    
+    // Close menu when clicking on a link
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const menu = document.querySelector('.nav-links');
+            const hamburger = document.querySelector('.hamburger');
+            if (menu && hamburger) {
+                menu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        const menu = document.querySelector('.nav-links');
+        const hamburger = document.querySelector('.hamburger');
+        const navLeft = document.querySelector('.nav-left');
+        
+        if (menu && hamburger && navLeft) {
+            if (!navLeft.contains(e.target) && menu.classList.contains('active')) {
+                menu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        }
+    });
+});
+
+// Function to toggle mobile menu
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    const hamburger = document.querySelector('.hamburger');
+    
+    if (navLinks && hamburger) {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    }
+}
+
+console.log("✅ Mobile menu ready!");
